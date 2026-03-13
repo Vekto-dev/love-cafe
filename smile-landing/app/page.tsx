@@ -1,5 +1,15 @@
-import { redirect } from "next/navigation";
+import Header from "../components/layout/Header";
+import Hero from "../components/sections/Hero";
+import Collections from "../components/sections/Collections";
+import Experience from "../components/sections/Experience";
 
 export default function Home() {
-  redirect("/tienda");
+  return (
+    <main className="bg-black text-white">
+      <Header />
+      <Hero />
+      <Collections />
+      <Experience />
+    </main>
+  );
 }
