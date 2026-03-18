@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Star, MessageCircle, Camera, ChevronDown } from "lucide-react";
 import { hwUrl } from "@/lib/utils";
 import { whatsappUrl } from "@/lib/data/contact";
+import { AddressWithMap } from "@/components/ui/AddressWithMap";
 
 const STATS = [
   { value: "9.1", label: "Hostelworld" },
@@ -54,7 +55,7 @@ export function Hero() {
         <p className="text-text-muted text-lg sm:text-xl max-w-2xl mx-auto mt-6 leading-relaxed drop-shadow-lg">
           El hostel cultural de Rosario. Murales, música en vivo, estudio de grabación y la mejor
           onda de Argentina.{" "}
-          <span className="text-accent font-semibold">San Lorenzo 1670.</span>
+          <AddressWithMap />
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
