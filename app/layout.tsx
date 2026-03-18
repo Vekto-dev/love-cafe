@@ -40,6 +40,20 @@ export const metadata: Metadata = {
     "backpacker hostel rosario",
     "where to stay rosario argentina",
     "hostel rosario argentina",
+    "alojamiento rosario",
+    "alojamiento barato rosario",
+    "alojamiento centro rosario",
+    "donde dormir rosario",
+    "hostal rosario argentina",
+    "habitacion rosario",
+    "rosario hotel economico",
+    "nómade digital rosario",
+    "estadía larga rosario",
+    "musicos rosario alojamiento",
+    "estudio grabacion rosario",
+    "trabajo remoto rosario",
+    "rosario invierno alojamiento",
+    "temporada baja rosario",
   ],
   authors: [{ name: "Cool Raúl Rock'n Hostel" }],
   creator: "VEKTO",
@@ -183,6 +197,21 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              name: "Estudio de grabación Cool Raúl",
+              description:
+                "Estudio de grabación profesional y sala de ensayo disponible para huéspedes y músicos locales en Rosario, Argentina.",
+              provider: { "@type": "Hostel", name: "Cool Raúl Rock'n Hostel" },
+              areaServed: { "@type": "City", name: "Rosario" },
+              url: "https://coolraulhostel.com/musicos",
+            }),
+          }}
         />
       </head>
       <body>

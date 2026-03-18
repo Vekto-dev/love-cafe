@@ -19,6 +19,11 @@ const FAQ_ITEMS = [
   { q: "¿Puedo recibir paquetes o correo en el hostel?", a: "Sí, podemos recibir paquetes a tu nombre en la recepción. Avisanos por WhatsApp cuando esperes una entrega para que el equipo esté al tanto." },
   { q: "¿Tienen espacios para trabajar en remoto?", a: "El hostel tiene áreas comunes con mesas, sillas y enchufes donde podés trabajar cómodamente. El WiFi tiene buena velocidad. No es un coworking formal, pero muchos nómadas digitales se quedan semanas trabajando desde acá." },
   { q: "¿Cuál es la política de cancelación?", a: "La política varía según la plataforma de reserva. Si reservás directo por WhatsApp, consultá las condiciones al momento de confirmar. Generalmente somos flexibles si avisás con anticipación." },
+  { q: "¿Tienen descuentos por estadía larga o temporada baja?", a: "Sí. Ofrecemos tarifas especiales para estadías de 7 noches o más, y precios reducidos en temporada baja (junio a agosto). El precio más bajo siempre es reservando directo por WhatsApp, sin comisiones de plataformas." },
+  { q: "¿Qué hay para hacer en Rosario en invierno?", a: "Rosario en invierno (junio-agosto) es una experiencia diferente a la del verano. La ciudad se vive sin turistas: gastronomía, museos, teatros, bares y la escena musical activa. Temperaturas de 8-15°C, perfectas para recorrer el centro a pie y descubrir la ciudad real." },
+  { q: "¿Puedo quedarme semanas trabajando en remoto?", a: "Muchos de nuestros huéspedes se quedan semanas o meses trabajando remotamente desde el hostel. Contás con WiFi de alta velocidad, mesas en las áreas comunes, cocina equipada para no depender de restaurantes y lockers para guardar tu equipo. Consultá por tarifas para estadías largas." },
+  { q: "¿El estudio de grabación tiene costo adicional?", a: "El estudio de grabación profesional y la sala de ensayo tienen un costo adicional que varía según el uso (horas, tipo de sesión, necesidad de técnico). El alquiler de instrumentos también está disponible. Consultá disponibilidad y tarifas por WhatsApp antes de llegar." },
+  { q: "¿Puedo llegar y quedarme sin reserva previa?", a: "En temporada baja generalmente hay disponibilidad, pero siempre recomendamos confirmar por WhatsApp antes de venir para asegurarte el tipo de habitación que necesitás. La reserva directa también garantiza el mejor precio." },
 ];
 
 export function FAQ() {

@@ -6,6 +6,8 @@ export interface Room {
   tag: string;
   tagColor: string;
   photoId: string;
+  priceFrom: string;
+  priceSuffix: string;
 }
 
 export const ROOMS: Room[] = [
@@ -17,6 +19,8 @@ export const ROOMS: Room[] = [
     tag: "MÁS ELEGIDO",
     tagColor: "bg-primary",
     photoId: "5010",
+    priceFrom: "USD 8",
+    priceSuffix: "/noche",
   },
   {
     name: "Dormitorio Femenino",
@@ -26,6 +30,8 @@ export const ROOMS: Room[] = [
     tag: "PARA ELLAS",
     tagColor: "bg-accent-red",
     photoId: "509",
+    priceFrom: "USD 8",
+    priceSuffix: "/noche",
   },
   {
     name: "Habitación Privada",
@@ -35,5 +41,7 @@ export const ROOMS: Room[] = [
     tag: "PRIVADA",
     tagColor: "bg-accent",
     photoId: "503",
+    priceFrom: "USD 25",
+    priceSuffix: "/noche",
   },
 ];

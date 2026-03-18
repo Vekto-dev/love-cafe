@@ -67,6 +67,44 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
     ogImage: hwUrl("5016", 1200),
   },
+  {
+    slug: "rosario-en-invierno",
+    title: "Rosario en invierno: por qué es la mejor época para visitar",
+    shortTitle: "Rosario en invierno",
+    description:
+      "Guía completa para visitar Rosario en temporada baja. Clima, precios, qué hacer en junio, julio y agosto. Por qué el invierno es la estación secreta de Rosario.",
+    datePublished: "2026-03-10",
+    dateModified: "2026-03-10",
+    readingTime: 6,
+    keywords: [
+      "rosario en invierno",
+      "rosario temporada baja",
+      "rosario julio agosto",
+      "que hacer rosario invierno",
+      "rosario cuando ir",
+      "clima rosario invierno",
+    ],
+    ogImage: hwUrl("5016", 1200),
+  },
+  {
+    slug: "rosario-nomades-digitales",
+    title: "Rosario para nómades digitales: guía completa 2026",
+    shortTitle: "Rosario para nómades digitales",
+    description:
+      "Todo lo que necesitás saber para trabajar en remoto desde Rosario: costo de vida, conectividad, barrios, alojamiento y comunidad. La guía honesta.",
+    datePublished: "2026-03-15",
+    dateModified: "2026-03-15",
+    readingTime: 7,
+    keywords: [
+      "nomade digital rosario",
+      "trabajo remoto rosario",
+      "vivir en rosario argentina",
+      "coworking rosario",
+      "costo de vida rosario 2026",
+      "hostel coworking rosario",
+    ],
+    ogImage: hwUrl("504", 1200),
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

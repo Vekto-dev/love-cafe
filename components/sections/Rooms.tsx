@@ -44,7 +44,13 @@ export function Rooms() {
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="font-heading text-2xl text-text-primary mb-1">{room.name}</h3>
                   <p className="text-text-muted text-sm mb-1">{room.capacity}</p>
-                  <p className="text-primary-light text-sm font-medium mb-4">{room.highlight}</p>
+                  <p className="text-primary-light text-sm font-medium mb-3">{room.highlight}</p>
+
+                  <div className="flex items-baseline gap-1 mb-4">
+                    <span className="font-heading text-2xl text-accent">{room.priceFrom}</span>
+                    <span className="text-text-dim text-xs">{room.priceSuffix}</span>
+                    <span className="text-text-dim text-xs ml-auto">mejor precio directo</span>
+                  </div>
 
                   <ul className="space-y-2 mb-6 flex-1" aria-label={`Características de ${room.name}`}>
                     {room.features.map((f) => (

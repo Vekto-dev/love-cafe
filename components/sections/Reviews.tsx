@@ -30,12 +30,12 @@ export function Reviews() {
                   <Star key={s} className="w-4 h-4 fill-accent text-accent" aria-hidden="true" />
                 ))}
               </div>
-              <span className="text-text-muted text-sm">27 reseñas verificadas</span>
+              <span className="text-text-muted text-sm">9.1/10 · Hostelworld</span>
             </div>
           </div>
         </AnimateInView>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" aria-label="Reseñas de huéspedes">
           {REVIEWS.map((r, i) => (
             <AnimateInView key={`${r.name}-${i}`} delay={i * 80}>
               <article className="glass-card rounded-2xl p-5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
@@ -90,7 +90,7 @@ export function Reviews() {
           <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/40 to-transparent" aria-hidden="true" />
           <div className="absolute inset-0 flex items-center px-8 sm:px-12">
             <div>
-              <p className="font-heading text-xl sm:text-2xl text-text-primary">Más de 308 reseñas en Google</p>
+              <p className="font-heading text-xl sm:text-2xl text-text-primary">308+ reseñas en Google · 9.1 en Hostelworld</p>
               <div className="flex gap-4 mt-3">
                 <a
                   href={CONTACT.googleMaps}

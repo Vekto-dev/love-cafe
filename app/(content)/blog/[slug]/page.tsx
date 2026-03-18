@@ -282,12 +282,161 @@ function NocheContent() {
   );
 }
 
+function RosarioInviernoContent() {
+  return (
+    <div className="prose prose-invert prose-headings:font-heading prose-headings:text-text-primary prose-p:text-text-muted prose-p:leading-relaxed prose-a:text-primary-light prose-a:no-underline hover:prose-a:underline prose-strong:text-text-primary prose-li:text-text-muted max-w-none">
+      <p>
+        Todo el mundo dice que Rosario se disfruta en verano. Las islas, la Costanera, el calor. Y sí, el verano tiene lo suyo. Pero hay un secreto que los rosarinos cuidan bien: el invierno es mejor.
+      </p>
+
+      <h2>El mito del verano</h2>
+      <p>
+        En enero Rosario está semivacía. Los rosarinos se van de vacaciones, los negocios cierran antes, los bares del centro tienen menos vida. El calor aprieta — 35, 40 grados en las peores semanas — y hay que moverse solo de noche. Es una ciudad diferente, más quieta de lo que la gente espera.
+      </p>
+      <p>
+        El verano tiene sus momentos: las islas del Paraná, las playas naturales del delta, la Costanera al amanecer antes del calor. Pero si querés conocer Rosario de verdad, el verano no es la mejor temporada.
+      </p>
+
+      <h2>El clima en invierno: lo que nadie te dice</h2>
+      <p>
+        El invierno rosarino no es el invierno patagónico. Las temperaturas van de 8 a 15°C la mayor parte de junio, julio y agosto. Hace frío, sí, pero un frío caminable. No llueve tanto como en Buenos Aires. Los días son cortos pero soleados, y salir a recorrer el centro con un buen abrigo es perfectamente cómodo.
+      </p>
+      <p>
+        No hay mosquitos, no hay humedad aplastante. El mate caliente cobra otro sentido. Y podés caminar la ciudad sin sudar.
+      </p>
+
+      <h2>La ciudad sin turistas</h2>
+      <p>
+        En invierno, Rosario es la ciudad de los rosarinos. Los bares de Pichincha tienen mesa disponible. El Mercado del Patio tiene lugar al mediodía. El Monumento a la Bandera se puede fotografiar sin selfie-sticks en el encuadre. Las pizzerías del centro te atienden sin espera.
+      </p>
+      <p>
+        Es la ciudad auténtica, sin la capa de turismo que a veces aplana la experiencia. Los lugareños son más accesibles, los mozos más relajados, la onda más genuina.
+      </p>
+
+      <h2>Qué hacer en invierno en Rosario</h2>
+      <ul>
+        <li>
+          <strong>Teatro El Círculo</strong>: la temporada de ópera y música clásica arranca en invierno. El teatro es uno de los más bellos de Argentina, con una acústica impresionante. Conseguir entradas en julio es incomparablemente más fácil que en primavera.
+        </li>
+        <li>
+          <strong>Museos</strong>: el Museo Provincial de Bellas Artes, el MACRO, el Museo de la Memoria. En verano están llenos o cerrados por el calor; en invierno los tenés casi para vos.
+        </li>
+        <li>
+          <strong>Recitales y shows en vivo</strong>: la escena musical de Rosario no para en invierno. Los bares de Pichincha y los espacios culturales tienen agenda intensa los fines de semana.
+        </li>
+        <li>
+          <strong>Asado de domingo en el Parque Independencia</strong>: sí, los rosarinos hacen asado en el parque en invierno con el sol pegando. Llevá mate y sumate.
+        </li>
+        <li>
+          <strong>Heladerías igualmente llenas</strong>: esto es un dato real. El rosarino come helado en invierno. No te sorprendas si hay cola en julio.
+        </li>
+      </ul>
+
+      <h2>Gastronomía de invierno</h2>
+      <p>
+        Los bodegones del centro sacan sus platos de invierno: locro, puchero, guiso de lentejas. Es la otra cara gastronómica de Rosario, menos instagram-friendly pero más honesta. Los precios son bajos y las porciones generosas.
+      </p>
+      <p>
+        La pizza "a la piedra" también cambia de sentido en invierno: caliente, recién salida del horno, con un vaso de vino tinto. Es otro ritual.
+      </p>
+
+      <h2>El precio: la razón más honesta</h2>
+      <p>
+        En temporada baja todo es más barato. El alojamiento puede costar entre un 20 y un 40% menos que en temporada alta. Los restaurantes tienen menús del día más accesibles. Los tours y actividades tienen descuentos.
+      </p>
+      <p>
+        Si viajás con presupuesto ajustado, el invierno es cuando Rosario es más accesible. Y si trabajás en remoto, es cuando el hostel está más tranquilo y podés quedarte semanas sin problemas.
+      </p>
+
+      <h2>Dónde quedarse</h2>
+      <p>
+        <Link href="/">Cool Raúl Rock&apos;n Hostel</Link> en invierno es una experiencia diferente. Más íntimo, menos gente, más espacio en las áreas comunes. El estudio de grabación tiene más disponibilidad. La terraza con parrilla la tenés casi para vos. Y el precio por noche es el más bajo del año.
+      </p>
+      <p>
+        Si estás pensando en visitar Rosario y tenés flexibilidad de fechas, considerá julio o agosto. Te va a sorprender.
+      </p>
+    </div>
+  );
+}
+
+function RosarioNomadeContent() {
+  return (
+    <div className="prose prose-invert prose-headings:font-heading prose-headings:text-text-primary prose-p:text-text-muted prose-p:leading-relaxed prose-a:text-primary-light prose-a:no-underline hover:prose-a:underline prose-strong:text-text-primary prose-li:text-text-muted max-w-none">
+      <p>
+        Rosario no aparece en las listas de "mejores destinos para nómades digitales". Eso es exactamente por qué está buena. Sin el hype de Buenos Aires, sin los precios de Mendoza, sin la infraestructura turística que a veces se come la autenticidad de los lugares.
+      </p>
+
+      <h2>Por qué Rosario y no Buenos Aires</h2>
+      <p>
+        La respuesta más corta: es entre un 30 y un 50% más barato vivir en Rosario que en Buenos Aires. El alquiler, la comida, los bares, el transporte. Todo más accesible.
+      </p>
+      <p>
+        Y la ciudad tiene todo lo que necesitás: universidad grande, buena escena gastronómica, transporte público decente, atención médica de calidad, comunidad cultural activa. No estás sacrificando calidad de vida. Estás pagando menos por ella.
+      </p>
+
+      <h2>Conectividad: la pregunta que siempre hacen</h2>
+      <p>
+        El internet en Rosario funciona bien. La fibra óptica llega a la mayoría del centro y los barrios residenciales. Los hostels y cafés del microcentro tienen WiFi estable para videoconferencias y trabajo normal. Si necesitás conexión de respaldo, las SIM de Personal, Claro o Movistar con datos 4G son baratas y funcionan en toda la ciudad.
+      </p>
+      <p>
+        No hay coworkings especializados al nivel de Buenos Aires, pero tampoco hacen falta para la mayoría de los trabajos remotos. Un hostel con buena conexión y mesas cómodas alcanza perfectamente.
+      </p>
+
+      <h2>Costo de vida real</h2>
+      <p>
+        Estimaciones para quien cobra en dólares o euros (usando tipo de cambio paralelo vigente):
+      </p>
+      <ul>
+        <li><strong>Alojamiento en hostel (dorm)</strong>: USD 8-12 por noche, USD 150-250 por mes</li>
+        <li><strong>Habitación privada en hostel</strong>: USD 25-35 por noche</li>
+        <li><strong>Comida por día</strong>: USD 10-20 cocinándote parcialmente, USD 20-40 comiendo afuera</li>
+        <li><strong>Transporte</strong>: casi nada — el microcentro es caminable y los colectivos cuestan centavos en dólares</li>
+        <li><strong>Ocio</strong>: bares, recitales, museos — USD 5-15 por salida</li>
+      </ul>
+      <p>
+        Una vida cómoda en Rosario, para alguien que cobra en divisas, cuesta entre USD 600 y USD 1.000 por mes. Menos que el alquiler de un cuarto en muchas ciudades europeas.
+      </p>
+
+      <h2>Los mejores barrios para vivir</h2>
+      <ul>
+        <li>
+          <strong>Microcentro</strong>: el más práctico. Todo a pie, cafés para trabajar, supermercados en la esquina. Ideal para estadías cortas o si llegás por primera vez.
+        </li>
+        <li>
+          <strong>Barrio Pichincha</strong>: más bohemio. Casas bajas, murales, bares a la vuelta. La gente que se queda más tiempo suele terminar acá. Más tranquilo que el centro pero con mucha vida de barrio.
+        </li>
+        <li>
+          <strong>Zona universitaria (República de la Sexta)</strong>: más joven. Cafeterías, librerías de usados, gente estudiando. Si querés conectar con la comunidad local, esta zona tiene mucho movimiento de veintipico.
+        </li>
+      </ul>
+
+      <h2>Comunidad y networking</h2>
+      <p>
+        Rosario tiene una comunidad tech silenciosa pero real. Hay meetups de desarrollo, grupos de emprendedores, eventos de la Universidad Nacional. No es el ecosistema de Buenos Aires, pero eso también significa menos competencia y más acceso a la gente.
+      </p>
+      <p>
+        En el hostel conocés viajeros y trabajadores remotos de todo el mundo que pasaron por la misma etapa de "me quedé más de lo que pensaba". Esa comunidad informal muchas veces vale más que cualquier coworking.
+      </p>
+
+      <h2>El hostel como base de operaciones</h2>
+      <p>
+        Si llegás a Rosario sin saber cuánto tiempo vas a quedarte, un hostel tiene más sentido que alquilar un departamento desde el primer día. Tenés flexibilidad total, no pagás depósito, no firmás contrato.
+      </p>
+      <p>
+        En <Link href="/">Cool Raúl</Link>, muchos nómades se quedan semanas antes de decidir si alquilan algo en la ciudad. El WiFi funciona bien para trabajar, hay mesas en las áreas comunes, la cocina equipada te permite no depender de delivery y los lockers guardan tu equipo de trabajo. Consultanos por tarifas para estadías largas — siempre hay algo mejor que la tarifa noche a noche.
+      </p>
+    </div>
+  );
+}
+
 /* ─── Content map ──────────────────────────────────────────────────────── */
 
 const CONTENT_MAP: Record<string, React.ComponentType> = {
   "hostel-en-rosario-como-elegir": HostelChoiceContent,
   "rosario-para-mochileros": MochilerosContent,
   "que-hacer-rosario-de-noche": NocheContent,
+  "rosario-en-invierno": RosarioInviernoContent,
+  "rosario-nomades-digitales": RosarioNomadeContent,
 };
 
 /* ─── Page ─────────────────────────────────────────────────────────────── */

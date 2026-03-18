@@ -191,6 +191,7 @@ export default function RosarioGuidePage() {
             { href: "/rosario/como-llegar", label: "Cómo llegar a Rosario", desc: "Bus, avión, auto y más" },
             { href: "/rosario/gastronomia", label: "Dónde comer en Rosario", desc: "Pizza, helado, parrilla y más" },
             { href: "/rosario/vida-nocturna", label: "Vida nocturna", desc: "Pichincha, bares y música en vivo" },
+            { href: "/rosario/cuando-visitar", label: "Cuándo visitar Rosario", desc: "Guía estacional completa" },
             { href: "/blog/rosario-para-mochileros", label: "Rosario para mochileros", desc: "Guía de presupuesto" },
           ].map((link) => (
             <Link

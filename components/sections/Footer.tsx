@@ -12,7 +12,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-background/95" aria-label="Pie de página">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -63,7 +63,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Internal links */}
+          {/* Guía de Rosario */}
           <div>
             <h3 className="text-text-primary font-semibold text-sm uppercase tracking-wider mb-4">Explorá Rosario</h3>
             <ul className="space-y-2">
@@ -74,6 +74,28 @@ export function Footer() {
                 { label: "Gastronomía", href: "/rosario/gastronomia" },
                 { label: "Vida nocturna", href: "/rosario/vida-nocturna" },
                 { label: "Blog de viajes", href: "/blog" },
+              ].map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="text-text-muted hover:text-text-primary text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Alojamiento */}
+          <div>
+            <h3 className="text-text-primary font-semibold text-sm uppercase tracking-wider mb-4">Alojamiento</h3>
+            <ul className="space-y-2">
+              {[
+                { label: "Alojamiento en Rosario", href: "/alojamiento-rosario" },
+                { label: "Para músicos", href: "/musicos" },
+                { label: "Trabajo remoto", href: "/trabajo-remoto" },
+                { label: "Cuándo visitar", href: "/rosario/cuando-visitar" },
               ].map((l) => (
                 <li key={l.href}>
                   <Link
