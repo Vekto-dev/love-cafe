@@ -164,6 +164,18 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="es" className={`${poppins.variable} ${righteous.variable}`}>
       <head>
+        <link
+          rel="preload"
+          as="image"
+          href="https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1920/v1/propertyimages/9/93936/501.jpg"
+        />
+        <link rel="alternate" hrefLang="es" href="https://coolraulhostel.com" />
+        <link rel="alternate" hrefLang="en" href="https://coolraulhostel.com/en" />
+        <link rel="alternate" hrefLang="pt" href="https://coolraulhostel.com/pt" />
+        <link rel="alternate" hrefLang="x-default" href="https://coolraulhostel.com" />
+        <link rel="icon" href="/icon" sizes="32x32" />
+        <link rel="icon" href="/icon" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-icon" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(hostelJsonLd) }}

@@ -24,6 +24,7 @@ export function Gallery() {
     setLightboxIndex((i) => (i !== null ? (i - 1 + GALLERY_PHOTOS.length) % GALLERY_PHOTOS.length : 0));
   const nextPhoto = () =>
     setLightboxIndex((i) => (i !== null ? (i + 1) % GALLERY_PHOTOS.length : 0));
+  const goToPhoto = (index: number) => setLightboxIndex(index);
 
   const shown = GALLERY_PHOTOS.slice(0, visibleCount);
 
@@ -121,6 +122,7 @@ export function Gallery() {
           onClose={closeLightbox}
           onPrev={prevPhoto}
           onNext={nextPhoto}
+          onGoTo={goToPhoto}
         />
       )}
     </>

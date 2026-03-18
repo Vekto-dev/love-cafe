@@ -12,11 +12,13 @@ interface Props {
   onClose: () => void;
   onPrev: () => void;
   onNext: () => void;
+  onGoTo: (index: number) => void;
 }
 
-export function Lightbox({ photos, current, onClose, onPrev, onNext }: Props) {
+export function Lightbox({ photos, current, onClose, onPrev, onNext, onGoTo }: Props) {
   const closeRef = useRef<HTMLButtonElement>(null);
   const touchStartX = useRef<number | null>(null);
+  const thumbsRef = useRef<HTMLDivElement>(null);
 
   // Focus trap & keyboard navigation
   useEffect(() => {
@@ -33,6 +35,15 @@ export function Lightbox({ photos, current, onClose, onPrev, onNext }: Props) {
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, [onClose, onPrev, onNext]);
+
+  // Auto-scroll thumbnail strip to active item
+  useEffect(() => {
+    if (!thumbsRef.current) return;
+    const activeThumb = thumbsRef.current.children[current] as HTMLElement;
+    if (activeThumb) {
+      activeThumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+  }, [current]);
 
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
@@ -109,19 +120,14 @@ export function Lightbox({ photos, current, onClose, onPrev, onNext }: Props) {
 
       {/* Thumbnail strip — desktop only */}
       <div
+        ref={thumbsRef}
         className="hidden md:flex gap-2 mt-4 overflow-x-auto max-w-4xl px-4 pb-2"
         onClick={(e) => e.stopPropagation()}
       >
         {photos.map((photo, i) => (
           <button
             key={photo.id}
-            onClick={() => {
-              // navigate to index via onPrev/onNext isn't ideal here;
-              // we rely on parent Gallery to expose a setIndex — but we can
-              // approximate: dispatch a custom event or just show visual indicator.
-              // For simplicity: clicking a thumbnail fires onNext/onPrev enough times.
-              // Instead we pass onGoTo via prop.
-            }}
+            onClick={() => onGoTo(i)}
             aria-label={`Ver foto: ${photo.label}`}
             className={`flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer ${
               i === current ? "border-primary-light scale-110" : "border-transparent opacity-60 hover:opacity-100"

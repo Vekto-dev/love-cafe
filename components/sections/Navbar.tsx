@@ -129,10 +129,11 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden overflow-hidden transition-[grid-template-rows] duration-300 ease-out ${
+          open ? "grid grid-rows-[1fr]" : "grid grid-rows-[0fr]"
         } bg-background/98 backdrop-blur-md border-b border-border`}
       >
+        <div className="min-h-0">
         <div className="px-4 py-4 flex flex-col gap-3">
           {NAV_LINKS.map((l) => (
             <a
@@ -169,6 +170,7 @@ export function Navbar() {
             <MessageCircle className="w-4 h-4" aria-hidden="true" />
             Consultar por WhatsApp
           </a>
+        </div>
         </div>
       </div>
     </nav>
