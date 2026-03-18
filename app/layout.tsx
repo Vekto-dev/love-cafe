@@ -107,7 +107,7 @@ const hostelJsonLd = {
   },
   geo: { "@type": "GeoCoordinates", latitude: -32.9468, longitude: -60.6393 },
   image: OG_IMAGE,
-  priceRange: "$",
+  priceRange: "$ · Dormitorios desde USD 8/noche",
   starRating: { "@type": "Rating", ratingValue: "9.1", bestRating: "10", worstRating: "1" },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -197,6 +197,39 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SiteLinksSearchBox",
+              url: "https://coolraulhostel.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://coolraulhostel.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              name: "Navegación principal Cool Raúl",
+              itemListElement: [
+                { "@type": "SiteNavigationElement", position: 1, name: "Habitaciones", url: "https://coolraulhostel.com/#habitaciones" },
+                { "@type": "SiteNavigationElement", position: 2, name: "Servicios", url: "https://coolraulhostel.com/#servicios" },
+                { "@type": "SiteNavigationElement", position: 3, name: "Estudio de grabación", url: "https://coolraulhostel.com/musicos" },
+                { "@type": "SiteNavigationElement", position: 4, name: "Trabajo remoto", url: "https://coolraulhostel.com/trabajo-remoto" },
+                { "@type": "SiteNavigationElement", position: 5, name: "Guía de Rosario", url: "https://coolraulhostel.com/rosario" },
+                { "@type": "SiteNavigationElement", position: 6, name: "Blog de viajes", url: "https://coolraulhostel.com/blog" },
+              ],
+            }),
+          }}
         />
         <script
           type="application/ld+json"

@@ -4,10 +4,10 @@ import { hwUrl } from "@/lib/utils";
 import { whatsappUrl } from "@/lib/data/contact";
 
 const STATS = [
-  { value: "9.1", label: "Hostelworld" },
-  { value: "4.0", label: "Google (308+ reseñas)" },
-  { value: "~20", label: "Años de historia" },
-  { value: "24h", label: "Recepción abierta" },
+  { value: "9.1", label: "Hostelworld", sub: "/10" },
+  { value: "4.0★", label: "Google", sub: "308+ reseñas" },
+  { value: "~20", label: "años", sub: "de historia" },
+  { value: "24h", label: "recepción", sub: "abierta" },
 ];
 
 export function Hero() {
@@ -26,6 +26,8 @@ export function Hero() {
           priority
           quality={85}
           sizes="100vw"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/95" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" aria-hidden="true" />
@@ -45,8 +47,8 @@ export function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
         {/* Badge */}
         {isOffSeason ? (
-          <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/50 rounded-full px-4 py-1.5 mb-6 text-sm text-accent font-semibold animate-pulse">
-            <span aria-hidden="true">❄️</span>
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6 text-sm font-semibold" style={{ background: "linear-gradient(135deg, rgba(251,191,36,0.25) 0%, rgba(245,158,11,0.15) 100%)", border: "1px solid rgba(251,191,36,0.45)", color: "#FCD34D" }}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a1 1 0 0 1 1 1v1.07A8.001 8.001 0 0 1 20 12a1 1 0 1 1-2 0 6 6 0 0 0-5-5.917V7a1 1 0 0 1-2 0v-1.083A6 6 0 0 0 6 12a1 1 0 1 1-2 0 8.001 8.001 0 0 1 7-7.93V3a1 1 0 0 1 1-1zM8 17h8a1 1 0 0 1 0 2H8a1 1 0 0 1 0-2zm2 3h4a1 1 0 0 1 0 2h-4a1 1 0 0 1 0-2z"/></svg>
             <span>Temporada baja — precio más bajo del año</span>
           </div>
         ) : (
@@ -92,12 +94,13 @@ export function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="flex items-center justify-center gap-8 mt-14 flex-wrap" aria-label="Estadísticas del hostel">
+        <div className="flex items-center justify-center gap-6 mt-14 flex-wrap" aria-label="Estadísticas del hostel">
           {STATS.map((s, i) => (
-            <div key={s.label} className="flex items-center gap-8">
-              <div className="flex flex-col items-center">
-                <span className="font-heading text-4xl text-accent drop-shadow-lg">{s.value}</span>
-                <span className="text-text-muted text-xs mt-0.5">{s.label}</span>
+            <div key={s.label} className="flex items-center gap-6">
+              <div className="flex flex-col items-center min-w-[4rem]">
+                <span className="font-heading text-3xl sm:text-4xl text-accent drop-shadow-lg leading-none">{s.value}</span>
+                <span className="text-text-primary text-xs font-semibold mt-1 uppercase tracking-wide">{s.label}</span>
+                <span className="text-text-dim text-[10px] mt-0.5">{s.sub}</span>
               </div>
               {i < STATS.length - 1 && <div className="w-px h-10 bg-white/20 hidden sm:block" aria-hidden="true" />}
             </div>

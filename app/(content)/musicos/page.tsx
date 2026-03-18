@@ -8,7 +8,7 @@ import { AnimateInView } from "@/components/ui/AnimateInView";
 export const metadata: Metadata = {
   title: "Estudio de grabación en Rosario | Cool Raúl Rock'n Hostel",
   description:
-    "Grabá en Rosario sin gastar una fortuna. Estudio profesional, sala de ensayo y alquiler de instrumentos en el hostel cultural más icónico de la ciudad.",
+    "Estudio de grabación profesional en Rosario desde USD 8/noche de alojamiento incluido. Sala de ensayo, alquiler de instrumentos y ambiente músical en el hostel cultural de la ciudad.",
   keywords: [
     "estudio grabacion rosario",
     "grabar musica rosario",
@@ -170,6 +170,34 @@ export default function MusicosPage() {
             <p>
               Y el costo es radicalmente menor que en Buenos Aires. Studio time, alojamiento, comida. Todo más accesible. Es la base de operaciones perfecta si querés producir música sin gastar lo que no tenés.
             </p>
+          </div>
+        </AnimateInView>
+
+        {/* La escena actual */}
+        <AnimateInView delay={70} className="mt-14">
+          <h2 className="font-heading text-3xl text-text-primary mb-4">La escena actual de Rosario</h2>
+          <div className="prose prose-invert prose-p:text-text-muted prose-p:leading-relaxed prose-strong:text-text-primary max-w-none">
+            <p>
+              Rosario tiene una escena musical activa que va mucho más allá de su historia. Cada fin de semana hay bandas emergentes tocando en vivo en La Quimera, El Loft y Plataforma Lavardén. Géneros que van del rock al jazz, del folklore a la electrónica experimental.
+            </p>
+            <p>
+              <strong>Tocar en vivo mientras grabás</strong> es una posibilidad real. Muchos músicos que pasan por Cool Raúl terminan sumándose a sesiones espontáneas, conociendo músicos locales en el bar o consiguiendo un show de última hora. La ciudad te conecta si estás abierto a eso.
+            </p>
+            <p>
+              El circuito de bares con música en vivo del microcentro está a caminata del hostel. San Lorenzo, la Peatonal y el barrio del Puerto concentran la mayor parte de los venues. El staff te puede dar el dato de qué hay cada noche.
+            </p>
+          </div>
+          <div className="mt-6 grid sm:grid-cols-3 gap-4">
+            {[
+              { venue: "La Quimera", tipo: "Rock / Indie" },
+              { venue: "Plataforma Lavardén", tipo: "Teatro y música" },
+              { venue: "El Loft Rosario", tipo: "Jazz / Fusión" },
+            ].map((v) => (
+              <div key={v.venue} className="glass-card rounded-xl p-4">
+                <p className="text-text-primary font-semibold text-sm">{v.venue}</p>
+                <p className="text-text-dim text-xs mt-0.5">{v.tipo}</p>
+              </div>
+            ))}
           </div>
         </AnimateInView>
 

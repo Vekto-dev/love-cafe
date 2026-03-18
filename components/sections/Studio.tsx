@@ -40,8 +40,8 @@ export function Studio() {
                     {EQ_BARS.map((h, i) => (
                       <div
                         key={i}
-                        className="w-2 rounded-t-sm bg-gradient-to-t from-primary to-accent animate-pulse"
-                        style={{ height: `${h}%`, animationDelay: `${i * 0.1}s`, animationDuration: `${0.8 + (i % 4) * 0.3}s` }}
+                        className="eq-bar w-2 rounded-t-sm bg-gradient-to-t from-primary to-accent"
+                        style={{ height: `${h}%`, animationDelay: `${i * 0.12}s`, animationDuration: `${0.7 + (i % 5) * 0.18}s` }}
                       />
                     ))}
                   </div>

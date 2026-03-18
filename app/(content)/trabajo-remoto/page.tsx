@@ -8,7 +8,7 @@ import { AnimateInView } from "@/components/ui/AnimateInView";
 export const metadata: Metadata = {
   title: "Hostel para nómades digitales en Rosario | Cool Raúl",
   description:
-    "WiFi de alta velocidad, áreas de trabajo, cocina equipada y estadías largas con descuento. Cool Raúl es la base ideal para trabajar en remoto en Rosario.",
+    "Trabajá en remoto desde Rosario: WiFi rápido, cocina equipada, lockers y estadías largas desde USD 8/noche. La base de los nómades digitales en el centro de Argentina.",
   keywords: [
     "nomade digital rosario",
     "trabajo remoto rosario",
@@ -205,6 +205,62 @@ export default function TrabajoRemotoPage() {
               </blockquote>
             ))}
           </div>
+        </AnimateInView>
+
+        {/* Coworking informal */}
+        <AnimateInView delay={85} className="mt-14">
+          <h2 className="font-heading text-3xl text-text-primary mb-4">Coworking informal sin cuota mensual</h2>
+          <div className="prose prose-invert prose-p:text-text-muted prose-p:leading-relaxed prose-strong:text-text-primary max-w-none">
+            <p>
+              Los hostels son naturalmente buenos lugares para trabajar. Hay mesas largas, ambiente tranquilo en horas de oficina y siempre alguien con quien compartir un mate o hablar de proyectos. En Cool Raúl eso está incorporado en el DNA del lugar.
+            </p>
+            <p>
+              <strong>No es un coworking con hot desks y salas de reunión.</strong> Es mejor que eso: un espacio donde los nómadas se mezclan con viajeros, músicos y gente local. Las mejores conexiones profesionales que hiciste no fueron en eventos de networking — fueron en las áreas comunes de un hostel.
+            </p>
+            <p>
+              Si necesitás una videollamada tranquila, hay rincones más reservados. Si necesitás una pantalla externa o algo que no tenemos, consultanos — a veces podemos ayudar a coordinar.
+            </p>
+          </div>
+        </AnimateInView>
+
+        {/* Invierno ideal */}
+        <AnimateInView delay={88} className="mt-14">
+          <div className="glass-card rounded-3xl p-8 border border-accent/20">
+            <span className="inline-block text-accent font-semibold text-xs uppercase tracking-widest mb-3">Temporada ideal</span>
+            <h2 className="font-heading text-2xl text-text-primary mb-3">Invierno: el mejor momento para trabajar desde Rosario</h2>
+            <p className="text-text-muted text-sm leading-relaxed mb-4">
+              Junio, julio y agosto son los mejores meses para quedarse a trabajar en Rosario si ya vivís en un lugar cálido todo el año. La ciudad en invierno tiene temperaturas de 8–15°C, sin turistas, con toda la escena cultural activa. Y los precios del hostel son los más bajos del año.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-4 mb-5">
+              {[
+                { stat: "30%", desc: "menos turistas en invierno" },
+                { stat: "8-15°C", desc: "temperatura promedio" },
+                { stat: "mejor precio", desc: "del año garantizado" },
+              ].map((item) => (
+                <div key={item.stat} className="text-center">
+                  <p className="font-heading text-2xl text-accent">{item.stat}</p>
+                  <p className="text-text-dim text-xs mt-1">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <Link
+              href="/rosario/cuando-visitar"
+              className="text-primary-light hover:text-text-primary text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded"
+            >
+              Ver guía de cuándo visitar Rosario →
+            </Link>
+          </div>
+        </AnimateInView>
+
+        {/* Comunidad */}
+        <AnimateInView delay={90} className="mt-14">
+          <h2 className="font-heading text-3xl text-text-primary mb-4">La comunidad que encontrás acá</h2>
+          <p className="text-text-muted text-sm leading-relaxed mb-4">
+            Los que se quedan más de una semana en Cool Raúl no son turistas de paso. Son nómadas, músicos, viajeros con proyectos. El hostel tiene una mezcla que es difícil de encontrar: internacionalidad sin perder la identidad local.
+          </p>
+          <p className="text-text-muted text-sm leading-relaxed">
+            El staff habla español, inglés, portugués, hebreo y danés. Si necesitás recomendaciones de dónde comer, qué hacer el fin de semana o cómo moverte por la ciudad, siempre hay alguien que sabe. No es un hotel — es un lugar donde la gente se ayuda entre sí.
+          </p>
         </AnimateInView>
 
         {/* CTA */}

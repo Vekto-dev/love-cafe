@@ -39,7 +39,7 @@ export function About() {
                 puedan conectar con la cultura local, la música y la gente.
               </p>
               <p>
-                Casi dos décadas después, este <span className="text-accent font-semibold">hostel en el centro de Rosario</span> se convirtió en un ícono cultural de la ciudad. Sus
+                Casi dos décadas después, <span className="text-accent font-semibold">Cool Raúl es el hostel cultural de referencia en Rosario</span>, un ícono de la ciudad. Sus
                 paredes están cubiertas de murales, sus pasillos de historias, y su estudio de
                 grabación ha visto pasar músicos de todo el mundo.
               </p>

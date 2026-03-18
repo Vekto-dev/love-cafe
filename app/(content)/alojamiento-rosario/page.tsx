@@ -8,7 +8,7 @@ import { AnimateInView } from "@/components/ui/AnimateInView";
 export const metadata: Metadata = {
   title: "Alojamiento en Rosario Centro | Opciones y precios 2026",
   description:
-    "Guía de alojamiento en el centro de Rosario: hostels, habitaciones privadas y opciones para todos los presupuestos. Por qué Cool Raúl es la mejor relación precio-experiencia.",
+    "Alojamiento en Rosario centro desde USD 8/noche con desayuno incluido. Comparativa entre hoteles, apart-hoteles y hostels. Por qué el microcentro es la mejor zona para quedarse.",
   keywords: [
     "alojamiento rosario",
     "alojamiento barato rosario centro",
@@ -81,7 +81,7 @@ export default function AlojamientoRosarioPage() {
             Guía de alojamiento
           </span>
           <h1 className="font-heading text-4xl sm:text-5xl text-text-primary leading-tight mb-4">
-            Alojamiento en Rosario: la guía honesta
+            Alojamiento en Rosario Centro: precios y opciones 2026
           </h1>
           <p className="text-text-muted text-lg leading-relaxed">
             Rosario tiene opciones para todos los presupuestos. Esta guía te ayuda a entender qué hay disponible, cuánto cuesta y cuál zona elegir.
@@ -128,6 +128,52 @@ export default function AlojamientoRosarioPage() {
           </p>
 
         </article>
+
+        {/* Price comparison table */}
+        <AnimateInView className="mt-10 overflow-x-auto">
+          <h2 className="font-heading text-2xl text-text-primary mb-4">Comparativa de precios por tipo de alojamiento</h2>
+          <table className="w-full text-sm border-collapse" aria-label="Comparativa de precios de alojamiento en Rosario">
+            <thead>
+              <tr className="border-b border-border">
+                <th className="text-left py-3 pr-4 text-text-dim font-semibold text-xs uppercase tracking-wider">Tipo</th>
+                <th className="text-left py-3 pr-4 text-text-dim font-semibold text-xs uppercase tracking-wider">Precio/noche</th>
+                <th className="text-left py-3 pr-4 text-text-dim font-semibold text-xs uppercase tracking-wider">Desayuno</th>
+                <th className="text-left py-3 text-text-dim font-semibold text-xs uppercase tracking-wider">Cocina</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-border/50">
+              {[
+                { tipo: "Dormitorio hostel", precio: "USD 8–12", desayuno: "✓ incluido", cocina: "✓ compartida", highlight: true },
+                { tipo: "Habitación privada hostel", precio: "USD 25–35", desayuno: "✓ incluido", cocina: "✓ compartida", highlight: false },
+                { tipo: "Hotel 3★", precio: "USD 40–60", desayuno: "No incluido", cocina: "✗", highlight: false },
+                { tipo: "Apart-hotel", precio: "USD 50–80", desayuno: "✗", cocina: "✓ propia", highlight: false },
+              ].map((row) => (
+                <tr key={row.tipo} className={row.highlight ? "bg-primary/10" : ""}>
+                  <td className={`py-3 pr-4 ${row.highlight ? "text-text-primary font-semibold" : "text-text-muted"}`}>{row.tipo}</td>
+                  <td className={`py-3 pr-4 font-semibold ${row.highlight ? "text-accent" : "text-text-muted"}`}>{row.precio}</td>
+                  <td className="py-3 pr-4 text-text-muted">{row.desayuno}</td>
+                  <td className="py-3 text-text-muted">{row.cocina}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="text-text-dim text-xs mt-2">Precios estimados en USD. Varían según temporada y plataforma. Reserva directa = mejor precio.</p>
+        </AnimateInView>
+
+        {/* Seasonal tip */}
+        <AnimateInView delay={50} className="mt-6">
+          <div className="glass-card rounded-2xl p-5 border border-accent/30 flex items-start gap-4">
+            <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center flex-shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <p className="text-accent font-semibold text-sm mb-1">Temporada baja (junio–agosto): precios mínimos del año</p>
+              <p className="text-text-muted text-xs leading-relaxed">
+                El invierno en Rosario es la época con menos turistas y los precios más bajos. Ideal para estadías largas, nómadas digitales y músicos que quieren producir sin apuro. Consultá directamente por WhatsApp para obtener la tarifa de temporada baja.
+              </p>
+            </div>
+          </div>
+        </AnimateInView>
 
         {/* Cool Raúl como opción */}
         <AnimateInView className="mt-10 glass-card rounded-3xl p-8">

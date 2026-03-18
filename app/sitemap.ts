@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/que-hacer-rosario-de-noche`, lastModified: new Date("2026-03-01"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/blog/rosario-en-invierno`, lastModified: new Date("2026-03-10"), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/blog/rosario-nomades-digitales`, lastModified: new Date("2026-03-15"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/hostel-rosario-precio`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/en`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE}/pt`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
   ];

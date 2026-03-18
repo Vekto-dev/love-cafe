@@ -184,6 +184,42 @@ export default function RosarioGuidePage() {
 
         </article>
 
+        {/* Seasonal tip */}
+        {(() => {
+          const month = new Date().getMonth();
+          const isOffSeason = month >= 5 && month <= 7;
+          const isSummer = month >= 11 || month <= 1;
+          if (!isOffSeason && !isSummer) return null;
+          return (
+            <div className={`mt-10 glass-card rounded-2xl p-6 border ${isOffSeason ? "border-accent/30" : "border-primary/30"}`}>
+              <span className={`inline-block text-xs font-bold uppercase tracking-wider mb-2 ${isOffSeason ? "text-accent" : "text-primary-light"}`}>
+                {isOffSeason ? "Temporada baja activa" : "Temporada alta — verano"}
+              </span>
+              {isOffSeason ? (
+                <>
+                  <p className="text-text-primary font-semibold mb-2">Estás leyendo esto en invierno — el mejor momento para venir.</p>
+                  <p className="text-text-muted text-sm leading-relaxed">
+                    Junio, julio y agosto son los meses con menos turistas y los precios más bajos del año. La ciudad se vive diferente: gastronomía, museos y cultura sin multitudes. Cool Raúl tiene los precios mínimos del año.{" "}
+                    <a href="https://wa.me/5493416771443" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-amber-300 font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded">
+                      Consultar precios de invierno →
+                    </a>
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="text-text-primary font-semibold mb-2">Temporada alta: reservá con anticipación.</p>
+                  <p className="text-text-muted text-sm leading-relaxed">
+                    Diciembre, enero y febrero son los meses más demandados. Las islas del Paraná están en su apogeo. Recomendamos reservar alojamiento con al menos una semana de anticipación para asegurar disponibilidad.{" "}
+                    <a href="https://wa.me/5493416771443" target="_blank" rel="noopener noreferrer" className="text-primary-light hover:text-text-primary font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded">
+                      Reservar ahora →
+                    </a>
+                  </p>
+                </>
+              )}
+            </div>
+          );
+        })()}
+
         {/* Internal links */}
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
