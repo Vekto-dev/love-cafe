@@ -13,6 +13,12 @@ const FAQ_ITEMS = [
   { q: "¿Aceptan reservas por WhatsApp?", a: "Sí, podés reservar directamente por WhatsApp al +54 9 341 677-1443. Respondemos al instante. También podés usar Booking.com o Hostelworld." },
   { q: "¿Hay WiFi en todo el hostel?", a: "Sí, WiFi de alta velocidad gratuito en todas las áreas del hostel: dormitorios, áreas comunes, terraza y patio." },
   { q: "¿Tienen lockers?", a: "Sí, todos los dormitorios compartidos cuentan con lockers individuales con llave para guardar tus pertenencias. Recomendamos traer tu propio candado." },
+  { q: "¿Cómo llego desde el aeropuerto?", a: "El Aeropuerto Internacional Islas Malvinas está a 20 km del hostel. Podés tomar un remis por aproximadamente $5.000–8.000 ARS, o el bus 115 que tiene parada cerca del centro. Si reservás con anticipación, consultá si podemos coordinar traslado." },
+  { q: "¿Es seguro caminar por la zona de noche?", a: "El microcentro de Rosario es una zona comercial y transitada. Como en cualquier ciudad grande, recomendamos tomar precauciones básicas de noche, especialmente al volver de bares. El staff te puede recomendar radios de remises de confianza." },
+  { q: "¿Hay supermercados cerca?", a: "Sí, hay supermercados y kioscos a menos de 2 cuadras del hostel. También tenés la Peatonal Córdoba a 200 metros con todo tipo de comercios." },
+  { q: "¿Puedo recibir paquetes o correo en el hostel?", a: "Sí, podemos recibir paquetes a tu nombre en la recepción. Avisanos por WhatsApp cuando esperes una entrega para que el equipo esté al tanto." },
+  { q: "¿Tienen espacios para trabajar en remoto?", a: "El hostel tiene áreas comunes con mesas, sillas y enchufes donde podés trabajar cómodamente. El WiFi tiene buena velocidad. No es un coworking formal, pero muchos nómadas digitales se quedan semanas trabajando desde acá." },
+  { q: "¿Cuál es la política de cancelación?", a: "La política varía según la plataforma de reserva. Si reservás directo por WhatsApp, consultá las condiciones al momento de confirmar. Generalmente somos flexibles si avisás con anticipación." },
 ];
 
 export function FAQ() {
@@ -57,7 +63,7 @@ export function FAQ() {
                   id={`faq-answer-${i}`}
                   role="region"
                   aria-labelledby={`faq-question-${i}`}
-                  className={`overflow-hidden transition-all duration-300 ${openIndex === i ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
+                  className={`overflow-hidden transition-all duration-300 ${openIndex === i ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}
                 >
                   <p className="px-6 pb-5 text-text-muted text-sm leading-relaxed">{item.a}</p>
                 </div>

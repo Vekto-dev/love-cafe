@@ -11,5 +11,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: "El Estudio",  href: "#estudio" },
   { label: "Reseñas",     href: "#resenas" },
   { label: "Rosario",     href: "#rosario" },
+  { label: "Alrededores", href: "#alrededores" },
   { label: "FAQ",         href: "#faq" },
 ];

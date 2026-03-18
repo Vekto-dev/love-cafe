@@ -7,6 +7,7 @@ import { Services } from "@/components/sections/Services";
 import { Studio } from "@/components/sections/Studio";
 import { Reviews } from "@/components/sections/Reviews";
 import { RosarioGuide } from "@/components/sections/RosarioGuide";
+import { Surroundings } from "@/components/sections/Surroundings";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
@@ -26,6 +27,7 @@ export default function Home() {
         <Studio />
         <Reviews />
         <RosarioGuide />
+        <Surroundings />
         <FAQ />
         <FinalCTA />
       </main>

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { AddressWithMap } from "@/components/ui/AddressWithMap";
 import { ROSARIO_TIPS } from "@/lib/data/rosario";
 import { hwUrl } from "@/lib/utils";
 import { CONTACT } from "@/lib/data/contact";
@@ -78,7 +77,7 @@ export function RosarioGuide() {
                 <div>
                   <h3 className="font-heading text-xl text-text-primary mb-1">Cómo llegar</h3>
                   <p className="text-text-muted text-sm leading-relaxed">
-                    <AddressWithMap />, Rosario, Santa Fe.
+                    San Lorenzo 1670, Rosario, Santa Fe.
                     A 2 km de la terminal de ómnibus (traslado incluido) y en el corazón del microcentro.
                   </p>
                 </div>

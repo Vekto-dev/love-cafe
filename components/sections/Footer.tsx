@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Music, MapPin, Phone, ExternalLink } from "lucide-react";
 import { CONTACT } from "@/lib/data/contact";
-import { AddressWithMap } from "@/components/ui/AddressWithMap";
 
 const BOOKING_LINKS = [
   { label: "Booking.com", href: CONTACT.booking },
@@ -33,7 +32,7 @@ export function Footer() {
             <address className="not-italic space-y-2 text-text-muted text-sm">
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-text-dim" aria-hidden="true" />
-                <span><AddressWithMap />, {CONTACT.city}</span>
+                <span>{CONTACT.address}, {CONTACT.city}</span>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0 text-text-dim" aria-hidden="true" />
