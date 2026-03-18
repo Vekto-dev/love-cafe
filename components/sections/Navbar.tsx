@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { Music, Menu, X, MessageCircle } from "lucide-react";
 import { NAV_LINKS } from "@/lib/data/navigation";
 import { whatsappUrl } from "@/lib/data/contact";
@@ -12,7 +13,17 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  const [lang, setLang] = useState<Lang>("ES");
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const currentLang: Lang =
+    pathname === "/en" ? "EN" : pathname === "/pt" ? "PT" : "ES";
+
+  const handleLangChange = (newLang: Lang) => {
+    if (newLang === "EN") router.push("/en");
+    else if (newLang === "PT") router.push("/pt");
+    else if (newLang === "ES" && (pathname === "/en" || pathname === "/pt")) router.push("/");
+  };
 
   // Scroll state + close mobile menu on scroll
   useEffect(() => {
@@ -85,16 +96,16 @@ export function Navbar() {
 
           {/* Right actions */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Language stub */}
+            {/* Language selector */}
             <div className="flex items-center gap-1 bg-surface/60 rounded-full px-2 py-1" role="group" aria-label="Seleccionar idioma">
               {LANGS.map((l) => (
                 <button
                   key={l}
-                  onClick={() => setLang(l)}
+                  onClick={() => handleLangChange(l)}
                   className={`text-xs font-semibold px-2 py-0.5 rounded-full cursor-pointer transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary ${
-                    lang === l ? "bg-primary text-white" : "text-text-dim hover:text-text-muted"
+                    currentLang === l ? "bg-primary text-white" : "text-text-dim hover:text-text-muted"
                   }`}
-                  aria-pressed={lang === l}
+                  aria-pressed={currentLang === l}
                 >
                   {l}
                 </button>
@@ -150,11 +161,11 @@ export function Navbar() {
             {LANGS.map((l) => (
               <button
                 key={l}
-                onClick={() => setLang(l)}
+                onClick={() => { handleLangChange(l); setOpen(false); }}
                 className={`text-xs font-semibold px-3 py-1 rounded-full cursor-pointer transition-colors ${
-                  lang === l ? "bg-primary text-white" : "bg-surface text-text-dim"
+                  currentLang === l ? "bg-primary text-white" : "bg-surface text-text-dim"
                 }`}
-                aria-pressed={lang === l}
+                aria-pressed={currentLang === l}
               >
                 {l}
               </button>

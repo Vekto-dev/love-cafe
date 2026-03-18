@@ -185,10 +185,12 @@ export default function RosarioGuidePage() {
         </article>
 
         {/* Internal links */}
-        <div className="mt-10 grid sm:grid-cols-3 gap-4">
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             { href: "/rosario/que-hacer", label: "Qué hacer en Rosario", desc: "15 planes para todos los gustos" },
             { href: "/rosario/como-llegar", label: "Cómo llegar a Rosario", desc: "Bus, avión, auto y más" },
+            { href: "/rosario/gastronomia", label: "Dónde comer en Rosario", desc: "Pizza, helado, parrilla y más" },
+            { href: "/rosario/vida-nocturna", label: "Vida nocturna", desc: "Pichincha, bares y música en vivo" },
             { href: "/blog/rosario-para-mochileros", label: "Rosario para mochileros", desc: "Guía de presupuesto" },
           ].map((link) => (
             <Link

@@ -216,21 +216,22 @@ export default function QueHacerPage() {
       </div>
 
       {/* Internal links */}
-      <div className="mt-12 grid sm:grid-cols-2 gap-4">
-        <Link
-          href="/rosario/como-llegar"
-          className="glass-card rounded-2xl p-5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer group block focus:outline-none focus:ring-2 focus:ring-primary"
-        >
-          <p className="text-text-primary font-semibold text-sm group-hover:text-primary-light transition-colors">Cómo llegar a Rosario →</p>
-          <p className="text-text-dim text-xs mt-1">Bus, avión, auto y cómo llegar al hostel</p>
-        </Link>
-        <Link
-          href="/blog/rosario-para-mochileros"
-          className="glass-card rounded-2xl p-5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer group block focus:outline-none focus:ring-2 focus:ring-primary"
-        >
-          <p className="text-text-primary font-semibold text-sm group-hover:text-primary-light transition-colors">Rosario para mochileros →</p>
-          <p className="text-text-dim text-xs mt-1">Guía de presupuesto actualizada</p>
-        </Link>
+      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {[
+          { href: "/rosario/como-llegar", label: "Cómo llegar a Rosario", desc: "Bus, avión, auto y más" },
+          { href: "/rosario/gastronomia", label: "Dónde comer en Rosario", desc: "Pizza, helado y parrilla" },
+          { href: "/rosario/vida-nocturna", label: "Vida nocturna", desc: "Pichincha, bares y música" },
+          { href: "/blog/rosario-para-mochileros", label: "Rosario para mochileros", desc: "Guía de presupuesto" },
+        ].map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="glass-card rounded-2xl p-5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 cursor-pointer group block focus:outline-none focus:ring-2 focus:ring-primary"
+          >
+            <p className="text-text-primary font-semibold text-sm group-hover:text-primary-light transition-colors">{link.label} →</p>
+            <p className="text-text-dim text-xs mt-1">{link.desc}</p>
+          </Link>
+        ))}
       </div>
 
       {/* CTA */}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { MapPin } from "lucide-react";
 import { ROSARIO_TIPS } from "@/lib/data/rosario";
 import { hwUrl } from "@/lib/utils";
@@ -34,6 +35,25 @@ export function RosarioGuide() {
             </AnimateInView>
           ))}
         </div>
+
+        {/* Links to content pages */}
+        <AnimateInView delay={80} className="mt-8 flex flex-wrap gap-3 justify-center">
+          {[
+            { href: "/rosario", label: "Guía completa de Rosario →" },
+            { href: "/rosario/que-hacer", label: "15 planes imperdibles →" },
+            { href: "/rosario/gastronomia", label: "Dónde comer →" },
+            { href: "/rosario/vida-nocturna", label: "Vida nocturna →" },
+            { href: "/blog", label: "Blog de viajes →" },
+          ].map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className="text-sm text-primary-light hover:text-text-primary bg-primary/10 hover:bg-primary/20 border border-primary/30 hover:border-primary/50 px-4 py-2 rounded-full transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              {l.label}
+            </Link>
+          ))}
+        </AnimateInView>
 
         {/* Location card — Monumento a la Bandera al atardecer */}
         <AnimateInView delay={100} className="mt-12 glass-card rounded-3xl overflow-hidden">
