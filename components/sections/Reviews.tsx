@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { Star, ExternalLink } from "lucide-react";
 import { REVIEWS } from "@/lib/data/reviews";
@@ -6,6 +9,9 @@ import { CONTACT } from "@/lib/data/contact";
 import { AnimateInView } from "@/components/ui/AnimateInView";
 
 export function Reviews() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleReviews = showAll ? REVIEWS : REVIEWS.slice(0, 4);
+
   return (
     <section id="resenas" aria-label="Reseñas de huéspedes" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-background to-surface/20" aria-hidden="true" />
@@ -36,7 +42,7 @@ export function Reviews() {
         </AnimateInView>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" aria-label="Reseñas de huéspedes">
-          {REVIEWS.map((r, i) => (
+          {visibleReviews.map((r, i) => (
             <AnimateInView key={`${r.name}-${i}`} delay={i * 80}>
               <article className="glass-card rounded-2xl p-5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
                 <div className="flex items-center gap-3 mb-3">
@@ -76,6 +82,17 @@ export function Reviews() {
             </AnimateInView>
           ))}
         </div>
+
+        {!showAll && REVIEWS.length > 4 && (
+          <AnimateInView delay={80} className="text-center mt-6">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-flex items-center gap-2 bg-surface border border-border hover:border-primary/50 text-text-muted hover:text-text-primary text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              Ver las {REVIEWS.length - 4} reseñas restantes
+            </button>
+          </AnimateInView>
+        )}
 
         {/* Panoramic — huésped jugando ping pong frente al graffiti */}
         <AnimateInView delay={100} className="mt-12 relative h-40 sm:h-56 rounded-3xl overflow-hidden">

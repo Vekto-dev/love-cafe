@@ -10,6 +10,8 @@ const SOCIAL = [
 ];
 
 export function FinalCTA() {
+  const isOffSeason = new Date().getMonth() >= 5 && new Date().getMonth() <= 7;
+
   return (
     <section aria-label="Reservar ahora" className="py-24 relative overflow-hidden">
       {/* Bar con letrero Cool Raúl — pared verde */}
@@ -33,19 +35,37 @@ export function FinalCTA() {
           </div>
 
           <h2 className="font-heading text-4xl sm:text-6xl text-text-primary mb-4">
-            ¿Listo para el
-            <br />
-            <span className="text-gradient-rock">mejor hostel</span>
-            <br />
-            de Rosario?
+            {isOffSeason ? (
+              <>
+                Rosario en invierno.
+                <br />
+                <span className="text-gradient-rock">El precio más bajo</span>
+                <br />
+                del año.
+              </>
+            ) : (
+              <>
+                ¿Listo para el
+                <br />
+                <span className="text-gradient-rock">mejor hostel</span>
+                <br />
+                de Rosario?
+              </>
+            )}
           </h2>
 
           <p className="text-text-muted text-lg max-w-lg mx-auto mb-10">
-            Escribinos por WhatsApp y te respondemos al instante. Reserva directa, sin comisiones.
+            {isOffSeason
+              ? "Junio, julio y agosto: la ciudad sin turistas, el estudio más disponible y el precio más bajo del año. Escribinos y te contamos."
+              : "Escribinos por WhatsApp y te respondemos al instante. Reserva directa, sin comisiones."}
           </p>
 
           <a
-            href={whatsappUrl("Hola! Quiero reservar en Cool Raúl Hostel.")}
+            href={whatsappUrl(
+              isOffSeason
+                ? "Hola! Me interesa el hostel en temporada baja. ¿Cuáles son los precios para invierno?"
+                : "Hola! Quiero reservar en Cool Raúl Hostel."
+            )}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Reservar en Cool Raúl Hostel por WhatsApp: ${CONTACT.whatsappDisplay}`}

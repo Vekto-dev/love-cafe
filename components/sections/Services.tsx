@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Wifi } from "lucide-react";
 import { SERVICES } from "@/lib/data/services";
 import { hwUrl } from "@/lib/utils";
 import { AnimateInView } from "@/components/ui/AnimateInView";
@@ -34,6 +36,16 @@ export function Services() {
             </AnimateInView>
           ))}
         </div>
+
+        <AnimateInView delay={90} className="text-center mt-4 mb-0">
+          <Link
+            href="/trabajo-remoto"
+            className="inline-flex items-center gap-1.5 text-text-dim hover:text-primary-light text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded"
+          >
+            <Wifi className="w-3.5 h-3.5" aria-hidden="true" />
+            ¿Trabajás en remoto? Conocé nuestras opciones para estadías largas →
+          </Link>
+        </AnimateInView>
 
         {/* Banner — recepción colorida con puertas de colores */}
         <AnimateInView delay={100} className="mt-12 relative h-48 sm:h-64 rounded-3xl overflow-hidden">

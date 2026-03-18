@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Mic2, Guitar, Music, MessageCircle } from "lucide-react";
 import { hwUrl } from "@/lib/utils";
 import { whatsappUrl } from "@/lib/data/contact";
@@ -91,15 +92,21 @@ export function Studio() {
             </ul>
 
             <a
-              href={whatsappUrl("Hola! Quiero consultar sobre el estudio de grabación.")}
+              href={whatsappUrl("Hola! Quiero reservar una sesión en el estudio de grabación de Cool Raúl.")}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Consultar sobre el estudio de grabación por WhatsApp"
+              aria-label="Reservar sesión en el estudio de grabación por WhatsApp"
               className="inline-flex items-center gap-2 mt-8 bg-primary hover:bg-primary-light text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary-light"
             >
               <MessageCircle className="w-4 h-4" aria-hidden="true" />
-              Consultar el estudio
+              Reservar sesión de grabación
             </a>
+            <Link
+              href="/musicos"
+              className="inline-flex items-center gap-1.5 mt-3 text-text-dim hover:text-primary-light text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded"
+            >
+              Ver todo sobre músicos en Rosario →
+            </Link>
           </AnimateInView>
         </div>
       </div>

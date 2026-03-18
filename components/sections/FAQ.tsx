@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { AnimateInView } from "@/components/ui/AnimateInView";
 
@@ -76,6 +77,27 @@ export function FAQ() {
             </AnimateInView>
           ))}
         </div>
+
+        <AnimateInView delay={60} className="mt-8 pt-6 border-t border-border">
+          <p className="text-text-dim text-xs uppercase tracking-wider mb-4 text-center">Guías específicas</p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { href: "/musicos", label: "Para músicos", desc: "Estudio y sala de ensayo" },
+              { href: "/trabajo-remoto", label: "Trabajo remoto", desc: "WiFi y estadías largas" },
+              { href: "/rosario/cuando-visitar", label: "Cuándo visitar", desc: "Precios por temporada" },
+              { href: "/alojamiento-rosario", label: "Alojamiento", desc: "Guía completa" },
+            ].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="glass-card rounded-xl p-3 text-center hover:border-primary/50 transition-all duration-200 cursor-pointer group block focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <p className="text-text-primary text-xs font-semibold group-hover:text-primary-light transition-colors">{link.label}</p>
+                <p className="text-text-dim text-[10px] mt-0.5">{link.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </AnimateInView>
 
         <AnimateInView delay={100} className="mt-10 text-center">
           <p className="text-text-dim text-sm">

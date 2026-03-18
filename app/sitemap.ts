@@ -24,3 +24,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/pt`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
   ];
 }
+
+/*
+  ACCIÓN MANUAL REQUERIDA — Google Search Console:
+
+  1. Verificar dominio en https://search.google.com/search-console
+     (método recomendado: registro DNS TXT en Cloudflare)
+
+  2. Una vez verificado, enviar el sitemap manualmente:
+     Sitemaps > Agregar sitemap > https://coolraulhostel.com/sitemap.xml
+
+  3. Solicitar indexación de cada URL nueva con "Inspeccionar URL":
+     - https://coolraulhostel.com/alojamiento-rosario
+     - https://coolraulhostel.com/musicos
+     - https://coolraulhostel.com/trabajo-remoto
+     - https://coolraulhostel.com/rosario/cuando-visitar
+     - https://coolraulhostel.com/blog/rosario-en-invierno
+     - https://coolraulhostel.com/blog/rosario-nomades-digitales
+
+  4. Monitorear "Cobertura" semanalmente durante el primer mes.
+     Las URLs nuevas en un sitio con domain authority bajo
+     pueden tardar 1-4 semanas en indexarse orgánicamente.
+     La solicitud manual acelera esto a 24-72hs.
+*/

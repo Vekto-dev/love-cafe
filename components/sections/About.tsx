@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { hwUrl } from "@/lib/utils";
 import { AnimateInView } from "@/components/ui/AnimateInView";
+import { whatsappUrl } from "@/lib/data/contact";
 
 const TAGS = ["Rock", "Cultura", "Comunidad", "Rosario", "Música en vivo"];
 const LANGS = ["🇦🇷 Español", "🇺🇸 Inglés", "🇧🇷 Portugués", "🇮🇱 Hebreo", "🇩🇰 Danés"];
@@ -13,6 +14,8 @@ const COLLAGE = [
 ];
 
 export function About() {
+  const isOffSeason = new Date().getMonth() >= 5 && new Date().getMonth() <= 7;
+
   return (
     <section id="nosotros" aria-label="Nuestra historia" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-surface/30 to-background" aria-hidden="true" />
@@ -53,6 +56,21 @@ export function About() {
                 </span>
               ))}
             </div>
+
+            {isOffSeason && (
+              <div className="mt-5 inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-xl px-4 py-2.5">
+                <span className="text-accent text-xs font-bold uppercase tracking-wider">Temporada baja activa</span>
+                <span className="text-text-dim text-xs">·</span>
+                <a
+                  href={whatsappUrl("Hola! Me interesa el hostel en temporada baja. ¿Qué tarifas tienen para invierno?")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:text-amber-300 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-accent rounded"
+                >
+                  Consultar precios de invierno →
+                </a>
+              </div>
+            )}
           </AnimateInView>
 
           {/* Photo collage */}

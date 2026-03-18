@@ -43,6 +43,10 @@ export function RosarioGuide() {
             { href: "/rosario/que-hacer", label: "15 planes imperdibles →" },
             { href: "/rosario/gastronomia", label: "Dónde comer →" },
             { href: "/rosario/vida-nocturna", label: "Vida nocturna →" },
+            { href: "/rosario/cuando-visitar", label: "Cuándo visitar →" },
+            { href: "/musicos", label: "Para músicos →" },
+            { href: "/trabajo-remoto", label: "Trabajo remoto →" },
+            { href: "/alojamiento-rosario", label: "Alojamiento en Rosario →" },
             { href: "/blog", label: "Blog de viajes →" },
           ].map((l) => (
             <Link

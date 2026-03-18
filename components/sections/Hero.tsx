@@ -11,6 +11,9 @@ const STATS = [
 ];
 
 export function Hero() {
+  const month = new Date().getMonth(); // 0=ene … 5=jun, 6=jul, 7=ago
+  const isOffSeason = month >= 5 && month <= 7;
+
   return (
     <section id="hero" aria-label="Presentación" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background photo — bar con letrero Cool Raúl */}
@@ -41,10 +44,17 @@ export function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 rounded-full px-4 py-1.5 mb-6 text-sm text-primary-light font-medium">
-          <Star className="w-3.5 h-3.5 fill-primary-light" aria-hidden="true" />
-          <span>9.1/10 en Hostelworld · Casi 20 años en Rosario</span>
-        </div>
+        {isOffSeason ? (
+          <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/50 rounded-full px-4 py-1.5 mb-6 text-sm text-accent font-semibold animate-pulse">
+            <span aria-hidden="true">❄️</span>
+            <span>Temporada baja — precio más bajo del año</span>
+          </div>
+        ) : (
+          <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 rounded-full px-4 py-1.5 mb-6 text-sm text-primary-light font-medium">
+            <Star className="w-3.5 h-3.5 fill-primary-light" aria-hidden="true" />
+            <span>9.1/10 en Hostelworld · Casi 20 años en Rosario</span>
+          </div>
+        )}
 
         <h1 className="font-heading text-5xl sm:text-7xl lg:text-8xl text-text-primary leading-none mb-4 drop-shadow-2xl">
           <span className="block">COOL RAÚL</span>
@@ -59,14 +69,18 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
           <a
-            href={whatsappUrl("Hola! Quiero consultar disponibilidad en Cool Raúl Hostel.")}
+            href={whatsappUrl(
+              isOffSeason
+                ? "Hola! Vi que están en temporada baja. ¿Cuáles son los precios para junio/julio/agosto?"
+                : "Hola! Quiero consultar disponibilidad en Cool Raúl Hostel."
+            )}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Contactar por WhatsApp para consultar disponibilidad"
             className="flex items-center gap-3 bg-whatsapp hover:bg-green-400 text-white font-bold text-lg px-8 py-4 rounded-2xl transition-all duration-200 shadow-lg shadow-green-900/30 hover:shadow-green-900/50 hover:-translate-y-0.5 cursor-pointer w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-whatsapp"
           >
             <MessageCircle className="w-5 h-5" aria-hidden="true" />
-            Consultá por WhatsApp
+            {isOffSeason ? "Consultar precio de invierno" : "Consultá por WhatsApp"}
           </a>
           <a
             href="#galeria"
