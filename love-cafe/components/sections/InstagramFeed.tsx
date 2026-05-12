@@ -2,8 +2,17 @@
 
 import { motion } from "motion/react"
 import Image from "next/image"
-import { Instagram } from "lucide-react"
 import { INSTAGRAM_PHOTOS, INSTAGRAM_URL } from "@/lib/data/menus"
+
+function InstagramIcon({ size = 14 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
 
 export function InstagramFeed() {
   return (
@@ -64,7 +73,7 @@ export function InstagramFeed() {
 
             {/* Caption bar */}
             <div className="flex items-center gap-2 px-4 py-3 border-t border-[#FFE4E6]">
-              <Instagram size={14} className="text-[#881337] shrink-0" />
+              <InstagramIcon size={14} />
               <span className="text-xs text-[#5C3317]/70 truncate"
                 style={{ fontFamily: "var(--font-body)" }}>
                 {photo.caption}
@@ -89,7 +98,7 @@ export function InstagramFeed() {
           className="inline-flex items-center gap-2 rounded-full border-2 border-[#881337] px-8 py-3 text-sm font-medium text-[#881337] transition-all duration-300 hover:bg-[#881337] hover:text-white"
           style={{ fontFamily: "var(--font-body)" }}
         >
-          <Instagram size={15} />
+          <InstagramIcon size={15} />
           Seguinos en Instagram
         </a>
       </motion.div>

@@ -1,6 +1,15 @@
 import Image from "next/image"
-import { Instagram } from "lucide-react"
 import { INSTAGRAM_URL, WHATSAPP_URL } from "@/lib/data/menus"
+
+function InstagramIcon({ size = 17 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
 
 export function Footer() {
   return (
@@ -33,7 +42,7 @@ export function Footer() {
             aria-label="Instagram de Love Café"
             className="flex size-10 items-center justify-center rounded-full border border-[#FDA4AF]/40 text-[#881337] transition-all hover:bg-[#FFE4E6] hover:border-[#FDA4AF]"
           >
-            <Instagram size={17} />
+            <InstagramIcon size={17} />
           </a>
           <a
             href={WHATSAPP_URL}

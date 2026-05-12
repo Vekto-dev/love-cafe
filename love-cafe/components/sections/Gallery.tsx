@@ -29,7 +29,7 @@ export function Gallery() {
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" as const }}
       >
         <p className="text-xs tracking-[0.3em] uppercase text-[#C9A98A] mb-3"
           style={{ fontFamily: "var(--font-body)" }}>
@@ -75,7 +75,7 @@ export function Gallery() {
               initial={{ opacity: 0, scale: 0.96 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.1 }}
+              transition={{ duration: 0.6, ease: "easeOut" as const, delay: i * 0.1 }}
               className="relative shrink-0 overflow-hidden rounded-2xl transition-transform duration-500 hover:scale-[1.02]"
               style={{
                 scrollSnapAlign: "start",
