@@ -4,13 +4,7 @@ import { useRef } from "react"
 import { motion } from "motion/react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-
-const PHOTOS = [
-  { src: "/images/cafeteravertiendocafe.jpg", alt: "Cafetera vertiendo café" },
-  { src: "/images/doscafedospasteles.jpg", alt: "Dos cafés y dos pasteles" },
-  { src: "/images/macarons.jpg", alt: "Macarons" },
-  { src: "/images/mesa2cafey3postres.jpg", alt: "Mesa con cafés y postres" },
-]
+import { INSTAGRAM_PHOTOS } from "@/lib/data/menus"
 
 export function Gallery() {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -69,7 +63,7 @@ export function Gallery() {
             msOverflowStyle: "none",
           }}
         >
-          {PHOTOS.map((photo, i) => (
+          {INSTAGRAM_PHOTOS.map((photo, i) => (
             <motion.div
               key={photo.src}
               initial={{ opacity: 0, scale: 0.96 }}

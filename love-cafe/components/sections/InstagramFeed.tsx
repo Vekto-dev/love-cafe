@@ -16,7 +16,7 @@ function InstagramIcon({ size = 14 }: { size?: number }) {
 
 export function InstagramFeed() {
   return (
-    <section className="py-24 md:py-32" style={{ backgroundColor: "#FFE4E6" }}>
+    <section id="instagram" className="py-24 md:py-32" style={{ backgroundColor: "#FFE4E6" }}>
       {/* Header */}
       <motion.div
         className="text-center mb-12 px-6"
