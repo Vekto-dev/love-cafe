@@ -16,12 +16,12 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Love Café Rosario — Specialty Coffee & Pastelería",
+  title: "Love Café Rosario — Café de especialidad & Pastelería",
   description:
     "Café de especialidad, tortas y pasteles artesanales en el corazón de Rosario. Tucumán 1114.",
   openGraph: {
     title: "Love Café Rosario",
-    description: "Coffee made with love. Sweet mornings in Rosario.",
+    description: "Coffee made with love. Dulces y café de especialidad en Rosario.",
     locale: "es_AR",
     type: "website",
   },

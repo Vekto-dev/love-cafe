@@ -27,7 +27,7 @@ export function Hero() {
             className="text-xs tracking-[0.3em] uppercase text-[#C9A98A]"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Specialty Coffee · Rosario
+            Café de especialidad · Rosario
           </motion.p>
 
           <motion.h1
@@ -35,9 +35,9 @@ export function Hero() {
             className="text-5xl md:text-7xl leading-tight text-[#881337]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Coffee made
+            Café hecho
             <br />
-            <em>with love</em>
+            <em>con amor.</em>
           </motion.h1>
 
           <motion.p
@@ -45,7 +45,7 @@ export function Hero() {
             className="text-lg text-[#5C3317]/70 max-w-sm"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Sweet mornings in Rosario. Specialty coffee &amp; pastry hecho con el corazón.
+            Tu café favorito, nuestra especialidad.
           </motion.p>
 
           <motion.div {...fadeUp(0.55)} className="flex gap-4 flex-wrap">
