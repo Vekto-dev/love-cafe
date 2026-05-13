@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "nanobanana": {
+      "command": "uvx",
+      "args": ["nanobanana-mcp-server@latest"],
+      "env": {
+        "GEMINI_API_KEY": "AIzaSyAqpuO8Uu--eM9PWOW6EsbP5qT2kQSwtNI"
+      }
+    },
+    "stitch": {
+      "command": "npx",
+      "args": ["-y", "@_davideast/stitch-mcp", "proxy"],
+      "env": {}
+    },
+    "magic": {
+      "command": "npx",
+      "args": ["-y", "@21st-dev/magic@latest"],
+      "env": {
+        "API_KEY_21ST": "an_sk_71249f2a7a0f78eafed7cf8134c0cde8c727ffcf2bc55adde3912cc6a492e858"
+      }
+    }
+  }
+}
