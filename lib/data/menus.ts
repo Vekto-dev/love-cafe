@@ -4,7 +4,7 @@ export const MENU_DIGITAL_URL =
 export const MENU_TORTAS_URL =
   "https://drive.google.com/file/d/1ZVzzruHnpbgkN_9EEV8QEr8wFrvrvhDi/view"
 
-export const WHATSAPP_URL = "https://wa.me/54934183031111"
+export const WHATSAPP_URL = "https://wa.me/5493418031111"
 
 export const INSTAGRAM_URL = "https://www.instagram.com/lovecafe.ros/"
 
