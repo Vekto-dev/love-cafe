@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "motion/react"
-import { Coffee, Cake } from "lucide-react"
+import { Coffee, CakeSlice } from "lucide-react"
 import { MENU_DIGITAL_URL, MENU_TORTAS_URL } from "@/lib/data/menus"
 
 const MENUS = [
@@ -14,7 +14,7 @@ const MENUS = [
     cta: "Ver Menú de Café",
   },
   {
-    icon: Cake,
+    icon: CakeSlice,
     title: "Menú de Tortas",
     description:
       "Tortas, macarons y pasteles elaborados con amor. Dulces momentos para compartir.",
